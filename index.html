@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>79电影网 | 高清电影在线观看·热播电视剧·动漫综艺资源聚合</title>
+<meta name="keywords" content="79电影网,79电影网高清影视,79电影网电视剧在线,79电影网电影资源,79电影网动漫大全,79电影网综艺节目">
+<meta name="description" content="79电影网(79dianyingwang-zh.github.io)提供海量高清影视资源在线观看，涵盖最新电影、热播电视剧、经典动漫与热门综艺，分类清晰、每日更新、免费追剧看片。">
+<link rel="canonical" href="https://79dianyingwang-zh.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="79电影网 | 海量高清影视·免费在线观看">
+<meta property="og:description" content="79电影网每日更新电影、电视剧、动漫、综艺资源，分类清晰，一键追剧看片。">
+<meta property="og:url" content="https://79dianyingwang-zh.github.io/">
+<meta name="twitter:card" content="summary">
+<meta name="robots" content="index,follow">
+<style>
+:root{
+  --bg:#07090f; --bg2:#0d1018; --card:#131725; --card2:#1b2031;
+  --line:#262c40; --txt:#eef0f7; --txt2:#a3a9bf; --txt3:#6d7490;
+  --blue:#2f6bff; --blue2:#00d2ff; --pink:#ff4d94; --purple:#9d4dff;
+  --yellow:#ffcf3d; --sh:0 12px 34px rgba(0,0,0,.5);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.7;overflow-x:hidden;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(700px 420px at 85% -5%, rgba(47,107,255,.20), transparent 62%),
+    radial-gradient(600px 500px at -5% 15%, rgba(157,77,255,.14), transparent 60%),
+    var(--bg);
+}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+.container{width:100%;max-width:1200px;margin:0 auto;padding:0 16px}
+
+/* ===== Top notice ===== */
+.topbar{background:linear-gradient(90deg,var(--card2),var(--bg2));border-bottom:1px solid var(--line);font-size:13px;color:var(--txt2)}
+.topbar .container{display:flex;align-items:center;gap:16px;height:36px}
+.topbar .live{color:var(--pink);font-weight:700}
+.topbar .live::before{content:"●";animation:blink 1.4s infinite;margin-right:5px}
+@keyframes blink{50%{opacity:.3}}
+
+/* ===== Nav ===== */
+.navbar{position:sticky;top:0;z-index:99;background:rgba(7,9,15,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.navbar .container{display:flex;align-items:center;gap:18px;height:62px}
+.brand{display:flex;align-items:center;gap:9px;flex-shrink:0}
+.brand i{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--blue),var(--purple));display:grid;place-items:center;font-style:normal;font-size:20px;font-weight:900;color:#fff;box-shadow:0 6px 16px rgba(47,107,255,.4)}
+.brand b{font-size:21px;letter-spacing:.5px}
+.brand b em{font-style:normal;color:var(--blue2)}
+.menu{display:flex;gap:4px;margin-left:auto;align-items:center}
+.menu a{padding:9px 15px;border-radius:9px;font-size:14.5px;color:var(--txt2);transition:.2s}
+.menu a:hover{color:#fff;background:var(--card2)}
+.menu a.cur{color:#fff;background:var(--card2);box-shadow:inset 0 -2px 0 var(--blue2)}
+.tel{display:none}
+@media(min-width:900px){.tel{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--txt3);border-left:1px solid var(--line);padding-left:16px}}
+.ham{display:none;margin-left:auto;width:42px;height:42px;border:1px solid var(--line);border-radius:10px;background:var(--card);color:var(--txt);font-size:19px;cursor:pointer}
+
+/* ===== Banner ===== */
+.banner{padding:40px 0 30px}
+.banner-grid{display:grid;grid-template-columns:1fr 340px;gap:24px}
+.hero{position:relative;border-radius:22px;overflow:hidden;min-height:380px;padding:40px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(to top, rgba(7,9,15,.96) 10%, rgba(7,9,15,.2) 70%),
+  linear-gradient(135deg,#1a1f3a 0%,#2d1b4e 45%,#0f2b3d 100%)}
+.hero>*{position:relative;z-index:2}
+.hero .cat{display:inline-block;width:max-content;font-size:12px;color:var(--yellow);border:1px solid rgba(255,207,61,.4);padding:4px 12px;border-radius:20px;margin-bottom:14px;background:rgba(255,207,61,.08)}
+.hero h1{font-size:38px;font-weight:900;line-height:1.3;margin-bottom:12px}
+.hero h1 mark{background:linear-gradient(90deg,var(--blue2),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;padding:0}
+.hero p{color:#c4c8d8;font-size:15.5px;max-width:560px}
+.hero-acts{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.bt{display:inline-flex;align-items:center;gap:7px;padding:12px 26px;border-radius:30px;font-size:15px;font-weight:700;cursor:pointer;border:none;transition:.25s}
+.bt-a{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;box-shadow:0 8px 24px rgba(47,107,255,.45)}
+.bt-a:hover{transform:translateY(-2px)}
+.bt-b{background:var(--card2);color:var(--txt);border:1px solid var(--line)}
+.bt-b:hover{border-color:var(--blue2);color:var(--blue2)}
+.side{display:flex;flex-direction:column;gap:14px}
+.rank{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.rank h3{font-size:15px;margin-bottom:14px;display:flex;align-items:center;gap:7px}
+.rank h3::before{content:"";width:4px;height:16px;border-radius:2px;background:linear-gradient(var(--pink),var(--purple))}
+.rank li{display:flex;align-items:center;gap:11px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.rank li:last-child{border:none}
+.rank .n{width:22px;height:22px;border-radius:6px;background:var(--bg2);display:grid;place-items:center;font-size:12.5px;font-weight:800;color:var(--txt3);flex-shrink:0}
+.rank li:nth-child(-n+3) .n{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff}
+.rank .tx{flex:1;min-width:0}
+.rank .tx b{display:block;font-size:14px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rank .tx span{font-size:11.5px;color:var(--txt3)}
+.rank .sc{font-size:13px;font-weight:800;color:var(--yellow);flex-shrink:0}
+.ver{background:linear-gradient(150deg,#16243c,#1b1230);border:1px solid var(--line);border-radius:18px;padding:18px}
+.ver h3{font-size:15px;margin-bottom:12px}
+.ver p{font-size:13.5px;color:var(--txt2);margin-bottom:12px}
+.ver .row{display:flex;gap:8px;flex-wrap:wrap}
+.ver .row span{font-size:12px;color:var(--blue2);border:1px solid var(--line);padding:4px 11px;border-radius:20px}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{padding:9px 18px;border-radius:10px;background:var(--card);border:1px solid var(--line);color:var(--txt2);font-size:14px;cursor:pointer;transition:.2s}
+.chip.on{background:linear-gradient(135deg,var(--blue),var(--purple));color:#fff;border-color:transparent}
+.filter{margin-left:auto;display:flex;gap:8px;align-items:center;font-size:13.5px;color:var(--txt3)}
+select{height:38px;border-radius:9px;border:1px solid var(--line);background:var(--card);color:var(--txt);padding:0 12px;font-size:13.5px;outline:none}
+
+/* ===== Cards ===== */
+section{padding:40px 0}
+.cards{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.cd{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;transition:.28s;cursor:pointer}
+.cd:hover{transform:translateY(-6px);border-color:var(--blue);box-shadow:var(--sh)}
+.cd .cv{position:relative;aspect-ratio:16/10;overflow:hidden}
+.cd .cv .bg{position:absolute;inset:0;transition:.5s}
+.cd:hover .cv .bg{transform:scale(1.1)}
+.cd .cv .ep{position:absolute;top:9px;left:9px;background:rgba(0,0,0,.7);backdrop-filter:blur(3px);color:#fff;font-size:11.5px;padding:3px 9px;border-radius:5px}
+.cd .cv .star{position:absolute;bottom:9px;right:9px;background:var(--yellow);color:#1a1a1a;font-size:12px;font-weight:800;padding:2px 8px;border-radius:5px}
+.cd .cv .play{position:absolute;inset:0;display:grid;place-items:center;opacity:0;transition:.3s;background:rgba(7,9,15,.45)}
+.cd:hover .cv .play{opacity:1}
+.cd .cv .play::after{content:"▶";width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.95);color:var(--blue);display:grid;place-items:center;font-size:17px;padding-left:4px}
+.cd .cx{padding:12px 14px}
+.cd .cx h4{font-size:14.5px;font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cd .cx p{font-size:12.5px;color:var(--txt3);margin-top:5px}
+.g1{background:linear-gradient(140deg,#1e3a5f,#0d1119)}
+.g2{background:linear-gradient(140deg,#5a1e2e,#15101a)}
+.g3{background:linear-gradient(140deg,#1a5c4a,#0d1a16)}
+.g4{background:linear-gradient(140deg,#5c4a1a,#1a160d)}
+.g5{background:linear-gradient(140deg,#3a2c6e,#15101e)}
+.g6{background:linear-gradient(140deg,#6e2c5c,#1e1018)}
+.g7{background:linear-gradient(140deg,#2c5c6e,#0d161a)}
+.g8{background:linear-gradient(140deg,#6e4c2c,#1a140d)}
+.g9{background:linear-gradient(140deg,#3a1c1c,#170d0d)}
+.g10{background:linear-gradient(140deg,#1c3a5c,#0d121e)}
+
+/* ===== Schedule ===== */
+.schedule{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+.schedule .sc-head{display:flex;gap:0;background:var(--card2);overflow-x:auto}
+.schedule .sc-head div{padding:15px 22px;font-size:14.5px;color:var(--txt2);cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;transition:.2s}
+.schedule .sc-head div.on{color:#fff;border-bottom-color:var(--blue2)}
+.sc-body{display:none;padding:8px}
+.sc-body.on{display:block;animation:fade .3s}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.sc-body ul li{display:flex;align-items:center;gap:14px;padding:13px 14px;border-bottom:1px solid var(--line)}
+.sc-body ul li:last-child{border:none}
+.sc-body .tm{width:64px;flex-shrink:0;font-size:13.5px;font-weight:700;color:var(--blue2)}
+.sc-body .nm{flex:1;min-width:0;font-size:14.5px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sc-body .tag{font-size:11.5px;padding:3px 9px;border-radius:5px;flex-shrink:0}
+.t-a{background:rgba(47,107,255,.15);color:var(--blue2)}
+.t-b{background:rgba(255,77,148,.15);color:var(--pink)}
+.t-c{background:rgba(255,207,61,.15);color:var(--yellow)}
+
+/* ===== Topics ===== */
+.topics{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tp{position:relative;border-radius:16px;overflow:hidden;min-height:170px;padding:22px;display:flex;flex-direction:column;justify-content:flex-end;border:1px solid var(--line);transition:.3s;cursor:pointer}
+.tp:hover{transform:translateY(-4px)}
+.tp::before{content:"";position:absolute;inset:0;background:linear-gradient(to top, rgba(7,9,15,.94), rgba(7,9,15,.15))}
+.tp>*{position:relative;z-index:2}
+.tp.t1{background:linear-gradient(135deg,#1a2a4a,#2a1a3a)}
+.tp.t2{background:linear-gradient(135deg,#3a2a1a,#1a3a2a)}
+.tp.t3{background:linear-gradient(135deg,#2a1a3a,#1a3a4a)}
+.tp h4{font-size:19px;margin-bottom:6px}
+.tp p{font-size:13px;color:#c0c4d4}
+.tp .go{margin-top:10px;font-size:13px;color:var(--blue2)}
+
+/* ===== List block ===== */
+.blk-head{display:flex;align-items:baseline;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.blk-head h2{font-size:22px;font-weight:800}
+.blk-head h2 small{font-size:13px;color:var(--txt3);font-weight:400;margin-left:6px}
+.blk-head a{margin-left:auto;font-size:13.5px;color:var(--txt2);border-bottom:1px solid var(--line);padding-bottom:2px}
+.blk-head a:hover{color:var(--blue2);border-color:var(--blue2)}
+.mini-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.mi{display:flex;gap:14px;padding:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;transition:.22s;cursor:pointer}
+.mi:hover{border-color:var(--purple);background:var(--card2)}
+.mi .ic{width:96px;height:60px;border-radius:8px;flex-shrink:0}
+.mi h5{font-size:14px;font-weight:700;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.mi span{font-size:12px;color:var(--txt3);margin-top:5px;display:block}
+
+/* ===== About ===== */
+.about{background:linear-gradient(160deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:20px;padding:34px}
+.about-grid{display:grid;grid-template-columns:1fr 320px;gap:34px;align-items:center}
+.about h2{font-size:25px;margin-bottom:14px}
+.about h2 em{font-style:normal;background:linear-gradient(90deg,var(--blue2),var(--pink));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.about>p{color:var(--txt2);font-size:15px;margin-bottom:12px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}
+.kpi{text-align:center;padding:14px 8px;background:var(--bg2);border:1px solid var(--line);border-radius:12px}
+.kpi b{display:block;font-size:22px;font-weight:900;color:var(--blue2)}
+.kpi span{font-size:12px;color:var(--txt3)}
+.info-card{border-radius:16px;padding:24px;background:linear-gradient(150deg,#111a30,#1a1128);border:1px solid var(--line)}
+.info-card h4{margin-bottom:14px;font-size:15px;color:var(--yellow)}
+.info-card dl{display:grid;grid-template-columns:80px 1fr;gap:10px 12px;font-size:13.5px}
+.info-card dt{color:var(--txt3)}
+.info-card dd{color:var(--txt);font-family:Consolas,monospace;font-size:13px}
+
+/* ===== Footer ===== */
+footer{background:var(--bg2);border-top:1px solid var(--line);padding:42px 0 22px;margin-top:24px}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:28px}
+footer h5{font-size:15px;margin-bottom:14px}
+footer p,footer a{font-size:13.5px;color:var(--txt3);line-height:2.1}
+footer a:hover{color:var(--blue2)}
+.brand-s{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+.brand-s i{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,var(--blue),var(--purple));display:grid;place-items:center;font-style:normal;font-size:18px;font-weight:900;color:#fff}
+.siteurl{margin-top:14px;padding:12px 15px;background:var(--card);border:1px dashed var(--line);border-radius:10px;font-size:13px;color:var(--txt2)}
+.siteurl code{color:var(--yellow);font-family:Consolas,monospace}
+.copy{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);text-align:center;font-size:12.5px;color:var(--txt3);line-height:1.9}
+
+/* ===== Float ===== */
+.float{position:fixed;right:16px;bottom:20px;display:flex;flex-direction:column;gap:10px;z-index:98}
+.float button{width:46px;height:46px;border-radius:50%;border:none;color:#fff;font-size:18px;cursor:pointer;box-shadow:var(--sh);opacity:0;pointer-events:none;transform:translateY(10px);transition:.3s}
+.float button.show{opacity:1;pointer-events:auto;transform:none}
+.float .fb{background:linear-gradient(135deg,var(--blue),var(--purple))}
+
+/* ===== Responsive ===== */
+@media(max-width:1000px){
+  .cards{grid-template-columns:repeat(4,1fr)}
+  .banner-grid{grid-template-columns:1fr}
+  .hero{min-height:320px;padding:30px}
+  .hero h1{font-size:30px}
+  .side{display:none}
+}
+@media(max-width:760px){
+  .menu{display:none;position:absolute;top:62px;left:0;right:0;flex-direction:column;padding:14px;background:var(--bg2);border-bottom:1px solid var(--line)}
+  .menu.open{display:flex}
+  .menu a{width:100%;text-align:center;padding:12px}
+  .ham{display:block}
+  .cards{grid-template-columns:repeat(3,1fr)}
+  .topics{grid-template-columns:1fr}
+  .mini-list{grid-template-columns:1fr}
+  .mi .ic{width:84px;height:56px}
+  .about-grid{grid-template-columns:1fr;gap:22px}
+  .kpis{grid-template-columns:1fr 1fr}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .info-card dl{grid-template-columns:70px 1fr}
+}
+@media(max-width:480px){
+  section{padding:30px 0}
+  .banner{padding:26px 0 20px}
+  .hero h1{font-size:24px}
+  .cards{grid-template-columns:repeat(2,1fr);gap:11px}
+  .cd .cx h4{font-size:14px}
+  .blk-head h2{font-size:19px}
+  .filter{display:none}
+  .foot-grid{grid-template-columns:1fr}
+  .sc-body .tm{width:52px;font-size:12.5px}
+  .sc-body .nm{font-size:13.5px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/zhangzong.js"></script>
+
+<div class="topbar">
+  <div class="container">
+    <span class="live">直播中</span>
+    <span>79电影网每日 17:30 准时更新院线新片与热播剧集，欢迎收藏本站 → <b style="color:var(--txt)">79dianyingwang-zh.github.io</b></span>
+  </div>
+</div>
+
+<nav class="navbar">
+  <div class="container">
+    <a class="brand" href="#"><i>79</i><b>电影<em>网</em></b></a>
+    <button class="ham" onclick="document.getElementById('m').classList.toggle('open')">☰</button>
+    <div class="menu" id="m">
+      <a href="#home" class="cur">首页</a>
+      <a href="#movie">电影</a>
+      <a href="#tv">电视剧</a>
+      <a href="#anime">动漫</a>
+      <a href="#variety">综艺</a>
+      <a href="#topic">专题</a>
+      <a href="#info">资讯</a>
+      <a href="#about">关于</a>
+    </div>
+    <span class="tel">📅 每日 17:30 更新</span>
+  </div>
+</nav>
+
+<!-- Banner -->
+<div class="banner" id="home">
+  <div class="container">
+    <div class="banner-grid">
+      <div class="hero">
+        <span class="cat">本周人气王</span>
+        <h1>79电影网 · 海量高清影视<br><mark>一键追剧，告别片荒</mark></h1>
+        <p>电影、电视剧、动漫、综艺四大板块每日更新，按类型/地区/年份精准筛选。打开 79电影网，好片自己找上门。</p>
+        <div class="hero-acts">
+          <button class="bt bt-a" onclick="loc('#movie')">开始观影 →</button>
+          <button class="bt bt-b" onclick="loc('#about')">了解 79电影网</button>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="rank">
+          <h3>全网热播榜 TOP 6</h3>
+          <ul>
+            <li><span class="n">1</span><span class="tx"><b>暗潮汹涌</b><span>犯罪 · 美剧 / 9.4 分</span></span><span class="sc">9.4</span></li>
+            <li><span class="n">2</span><span class="tx"><b>长安十二时辰 第二季</b><span>古装 / 国产剧 / 9.1 分</span></span><span class="sc">9.1</span></li>
+            <li><span class="n">3</span><span class="tx"><b>流浪地球 3</b><span>科幻 / 国产片 / 8.9 分</span></span><span class="sc">8.9</span></li>
+            <li><span class="n">4</span><span class="tx"><b>请回答 1999</b><span>爱情 / 韩剧 / 8.8 分</span></span><span class="sc">8.8</span></li>
+            <li><span class="n">5</span><span class="tx"><b>刺客信条·起源</b><span>动作 / 美片 / 8.6 分</span></span><span class="sc">8.6</span></li>
+            <li><span class="n">6</span><span class="tx"><b>明日方舟·黎明</b><span>奇幻 / 国漫 / 8.5 分</span></span><span class="sc">8.5</span></li>
+          </ul>
+        </div>
+        <div class="ver">
+          <h3>🎯 本周看点</h3>
+          <p>院线新片、热播续作、口碑新番集中上线，79电影网为你打包整理。</p>
+          <div class="row"><span>4K 超清</span><span>每日更新</span><span>分类筛选</span><span>全端适配</span></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</div>
+
+<!-- Movie -->
+<section id="movie">
+  <div class="container">
+    <div class="blk-head">
+      <h2>电影频道 <small>院线新片 · 经典老片 · 类型全覆盖</small></h2>
+      <a href="#">全部电影 ›</a>
+    </div>
+    <div class="toolbar">
+      <div class="chips" data-group="m">
+        <button class="chip on" data-t="m1">全部</button>
+        <button class="chip" data-t="m2">动作</button>
+        <button class="chip" data-t="m3">喜剧</button>
+        <button class="chip" data-t="m4">爱情</button>
+        <button class="chip" data-t="m5">科幻</button>
+        <button class="chip" data-t="m6">悬疑</button>
+      </div>
+      <div class="filter">
+        <span>排序：</span>
+        <select><option>最新上线</option><option>高分优先</option><option>热度最高</option></select>
+        <select><option>全部地区</option><option>中国大陆</option><option>美国</option><option>韩国</option><option>日本</option></select>
+      </div>
+    </div>
+
+    <div class="cards tab-p" id="m1">
+      <div class="cd"><div class="cv"><div class="bg g1"></div><span class="ep">HD</span><span class="star">9.2</span><span class="play"></span></div><div class="cx"><h4>流浪地球 3</h4><p>科幻 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g2"></div><span class="ep">4K</span><span class="star">8.9</span><span class="play"></span></div><div class="cx"><h4>刺客信条·起源</h4><p>动作 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g3"></div><span class="ep">HD</span><span class="star">8.7</span><span class="play"></span></div><div class="cx"><h4>海边理发店</h4><p>剧情 / 日本 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g4"></div><span class="ep">1080P</span><span class="star">8.5</span><span class="play"></span></div><div class="cx"><h4>大话西游·重制版</h4><p>喜剧 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g5"></div><span class="ep">HD</span><span class="star">8.4</span><span class="play"></span></div><div class="cx"><h4>寂静岭：觉醒</h4><p>悬疑 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g6"></div><span class="ep">4K</span><span class="star">8.3</span><span class="play"></span></div><div class="cx"><h4>红妆谋</h4><p>古装 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g7"></div><span class="ep">HD</span><span class="star">8.1</span><span class="play"></span></div><div class="cx"><h4>深海救援</h4><p>冒险 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g8"></div><span class="ep">1080P</span><span class="star">7.9</span><span class="play"></span></div><div class="cx"><h4>欢喜冤家 2</h4><p>喜剧 / 中国香港 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g9"></div><span class="ep">HD</span><span class="star">7.8</span><span class="play"></span></div><div class="cx"><h4>暗夜行者</h4><p>犯罪 / 英国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g10"></div><span class="ep">4K</span><span class="star">7.6</span><span class="play"></span></div><div class="cx"><h4>云端恋人</h4><p>爱情 / 韩国 · 2026</p></div></div>
+    </div>
+
+    <div class="cards tab-p" id="m2" hidden>
+      <div class="cd"><div class="cv"><div class="bg g2"></div><span class="ep">4K</span><span class="star">8.9</span><span class="play"></span></div><div class="cx"><h4>刺客信条·起源</h4><p>动作 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g7"></div><span class="ep">HD</span><span class="star">8.4</span><span class="play"></span></div><div class="cx"><h4>深海救援</h4><p>冒险 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g5"></div><span class="ep">1080P</span><span class="star">8.2</span><span class="play"></span></div><div class="cx"><h4>铁拳无敌</h4><p>动作 / 泰国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g1"></div><span class="ep">HD</span><span class="star">8.0</span><span class="play"></span></div><div class="cx"><h4>边境风云</h4><p>动作 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g9"></div><span class="ep">4K</span><span class="star">7.8</span><span class="play"></span></div><div class="cx"><h4>暗夜行者</h4><p>犯罪 / 英国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g4"></div><span class="ep">HD</span><span class="star">7.7</span><span class="play"></span></div><div class="cx"><h4>极限营救</h4><p>动作 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g3"></div><span class="ep">1080P</span><span class="star">7.6</span><span class="play"></span></div><div class="cx"><h4>雪原猎人</h4><p>冒险 / 俄罗斯 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g8"></div><span class="ep">HD</span><span class="star">7.5</span><span class="play"></span></div><div class="cx"><h4>孤胆特工 2</h4><p>动作 / 韩国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g6"></div><span class="ep">4K</span><span class="star">7.4</span><span class="play"></span></div><div class="cx"><h4>荒野镖客</h4><p>动作 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g10"></div><span class="ep">HD</span><span class="star">7.3</span><span class="play"></span></div><div class="cx"><h4>暴风眼</h4><p>冒险 / 澳大利亚 · 2026</p></div></div>
+    </div>
+
+    <div class="cards tab-p" id="m3" hidden>
+      <div class="cd"><div class="cv"><div class="bg g4"></div><span class="ep">1080P</span><span class="star">8.5</span><span class="play"></span></div><div class="cx"><h4>大话西游·重制版</h4><p>喜剧 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g8"></div><span class="ep">HD</span><span class="star">7.9</span><span class="play"></span></div><div class="cx"><h4>欢喜冤家 2</h4><p>喜剧 / 中国香港 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g2"></div><span class="ep">4K</span><span class="star">7.8</span><span class="play"></span></div><div class="cx"><h4>笑翻全场</h4><p>喜剧 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g6"></div><span class="ep">HD</span><span class="star">7.7</span><span class="play"></span></div><div class="cx"><h4>乌龙快递</h4><p>喜剧 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g5"></div><span class="ep">1080P</span><span class="star">7.6</span><span class="play"></span></div><div class="cx"><h4>逃学威龙 2026</h4><p>喜剧 / 中国香港 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g1"></div><span class="ep">HD</span><span class="star">7.5</span><span class="play"></span></div><div class="cx"><h4>笨蛋情侣</h4><p>喜剧 / 韩国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g9"></div><span class="ep">4K</span><span class="star">7.4</span><span class="play"></span></div><div class="cx"><h4>戏精学院</h4><p>喜剧 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g3"></div><span class="ep">HD</span><span class="star">7.3</span><span class="play"></span></div><div class="cx"><h4>疯狂的石头 2</h4><p>喜剧 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g10"></div><span class="ep">1080P</span><span class="star">7.2</span><span class="play"></span></div><div class="cx"><h4>笑傲江湖·喜剧篇</h4><p>喜剧 / 中国香港 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g7"></div><span class="ep">HD</span><span class="star">7.1</span><span class="play"></span></div><div class="cx"><h4>邻里之间</h4><p>喜剧 / 美国 · 2026</p></div></div>
+    </div>
+
+    <div class="cards tab-p" id="m4" hidden>
+      <div class="cd"><div class="cv"><div class="bg g10"></div><span class="ep">4K</span><span class="star">8.4</span><span class="play"></span></div><div class="cx"><h4>云端恋人</h4><p>爱情 / 韩国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g5"></div><span class="ep">HD</span><span class="star">8.2</span><span class="play"></span></div><div class="cx"><h4>夏日终曲</h4><p>爱情 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g3"></div><span class="ep">1080P</span><span class="star">8.0</span><span class="play"></span></div><div class="cx"><h4>东京爱情故事 2026</h4><p>爱情 / 日本 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g6"></div><span class="ep">HD</span><span class="star">7.8</span><span class="play"></span></div><div class="cx"><h4>前任 4：再见</h4><p>爱情 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g2"></div><span class="ep">4K</span><span class="star">7.7</span><span class="play"></span></div><div class="cx"><h4>初恋的味道</h4><p>爱情 / 韩国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g8"></div><span class="ep">HD</span><span class="star">7.6</span><span class="play"></span></div><div class="cx"><h4>婚礼前夕</h4><p>爱情 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g4"></div><span class="ep">1080P</span><span class="star">7.5</span><span class="play"></span></div><div class="cx"><h4>恋爱合同</h4><p>爱情 / 泰国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g1"></div><span class="ep">HD</span><span class="star">7.4</span><span class="play"></span></div><div class="cx"><h4>遇见你的夏天</h4><p>爱情 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g9"></div><span class="ep">4K</span><span class="star">7.3</span><span class="play"></span></div><div class="cx"><h4>深夜咖啡馆</h4><p>爱情 / 日本 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g7"></div><span class="ep">HD</span><span class="star">7.2</span><span class="play"></span></div><div class="cx"><h4>相爱十年</h4><p>爱情 / 中国大陆 · 2026</p></div></div>
+    </div>
+
+    <div class="cards tab-p" id="m5" hidden>
+      <div class="cd"><div class="cv"><div class="bg g1"></div><span class="ep">HD</span><span class="star">9.2</span><span class="play"></span></div><div class="cx"><h4>流浪地球 3</h4><p>科幻 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g5"></div><span class="ep">4K</span><span class="star">8.6</span><span class="play"></span></div><div class="cx"><h4>星际拓荒</h4><p>科幻 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g7"></div><span class="ep">HD</span><span class="star">8.3</span><span class="play"></span></div><div class="cx"><h4>时间管理局</h4><p>科幻 / 西班牙 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g3"></div><span class="ep">1080P</span><span class="star">8.1</span><span class="play"></span></div><div class="cx"><h4>机械觉醒</h4><p>科幻 / 韩国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g10"></div><span class="ep">HD</span><span class="star">7.9</span><span class="play"></span></div><div class="cx"><h4>平行世界</h4><p>科幻 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g2"></div><span class="ep">4K</span><span class="star">7.8</span><span class="play"></span></div><div class="cx"><h4>异星遗迹</h4><p>科幻 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g6"></div><span class="ep">HD</span><span class="star">7.7</span><span class="play"></span></div><div class="cx"><h4>银河快递</h4><p>科幻 / 日本 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g8"></div><span class="ep">1080P</span><span class="star">7.6</span><span class="play"></span></div><div class="cx"><h4>量子危机</h4><p>科幻 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g4"></div><span class="ep">HD</span><span class="star">7.5</span><span class="play"></span></div><div class="cx"><h4>月球基地</h4><p>科幻 / 俄罗斯 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g9"></div><span class="ep">4K</span><span class="star">7.4</span><span class="play"></span></div><div class="cx"><h4>虚空之门</h4><p>科幻 / 法国 · 2026</p></div></div>
+    </div>
+
+    <div class="cards tab-p" id="m6" hidden>
+      <div class="cd"><div class="cv"><div class="bg g5"></div><span class="ep">HD</span><span class="star">8.7</span><span class="play"></span></div><div class="cx"><h4>寂静岭：觉醒</h4><p>悬疑 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g9"></div><span class="ep">4K</span><span class="star">8.5</span><span class="play"></span></div><div class="cx"><h4>暗夜行者</h4><p>犯罪 / 英国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g6"></div><span class="ep">HD</span><span class="star">8.3</span><span class="play"></span></div><div class="cx"><h4>红妆谋</h4><p>古装 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g1"></div><span class="ep">1080P</span><span class="star">8.1</span><span class="play"></span></div><div class="cx"><h4>消失的她 2</h4><p>悬疑 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g3"></div><span class="ep">HD</span><span class="star">7.9</span><span class="play"></span></div><div class="cx"><h4>记忆碎片</h4><p>悬疑 / 美国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g7"></div><span class="ep">4K</span><span class="star">7.8</span><span class="play"></span></div><div class="cx"><h4>无声的证言</h4><p>犯罪 / 中国大陆 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g2"></div><span class="ep">HD</span><span class="star">7.7</span><span class="play"></span></div><div class="cx"><h4>密室逃脱·终极篇</h4><p>悬疑 / 韩国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g10"></div><span class="ep">1080P</span><span class="star">7.6</span><span class="play"></span></div><div class="cx"><h4>午夜凶铃·重启</h4><p>惊悚 / 日本 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g4"></div><span class="ep">HD</span><span class="star">7.5</span><span class="play"></span></div><div class="cx"><h4>黑色名单</h4><p>犯罪 / 法国 · 2026</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g8"></div><span class="ep">4K</span><span class="star">7.4</span><span class="play"></span></div><div class="cx"><h4>迷雾追踪</h4><p>悬疑 / 中国大陆 · 2026</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TV -->
+<section id="tv">
+  <div class="container">
+    <div class="blk-head">
+      <h2>热播电视剧 <small>国产剧 · 美剧 · 韩剧 · 日剧</small></h2>
+      <a href="#">更新日历 ›</a>
+    </div>
+    <div class="schedule">
+      <div class="sc-head">
+        <div class="on">周一</div><div>周二</div><div>周三</div><div>周四</div><div>周五</div><div>周六</div><div>周日</div>
+      </div>
+      <div class="sc-body on">
+        <ul>
+          <li><span class="tm">19:30</span><span class="nm">长安十二时辰 第二季</span><span class="tag t-a">古装</span></li>
+          <li><span class="tm">20:00</span><span class="nm">请回答 1999</span><span class="tag t-b">韩剧</span></li>
+          <li><span class="tm">21:00</span><span class="nm">都市恋爱图鉴</span><span class="tag t-c">爱情</span></li>
+          <li><span class="tm">22:00</span><span class="nm">法医秦明 6</span><span class="tag t-a">悬疑</span></li>
+        </ul>
+      </div>
+      <div class="sc-body">
+        <ul>
+          <li><span class="tm">20:00</span><span class="nm">暗潮汹涌（美剧）</span><span class="tag t-a">犯罪</span></li>
+          <li><span class="tm">21:30</span><span class="nm">家族荣誉 3</span><span class="tag t-b">韩剧</span></li>
+          <li><span class="tm">22:00</span><span class="nm">沉默的真相 2</span><span class="tag t-c">悬疑</span></li>
+        </ul>
+      </div>
+      <div class="sc-body">
+        <ul>
+          <li><span class="tm">19:30</span><span class="nm">海边的卡门（日剧）</span><span class="tag t-b">治愈</span></li>
+          <li><span class="tm">20:00</span><span class="nm">边境风云 剧版</span><span class="tag t-a">动作</span></li>
+          <li><span class="tm">21:00</span><span class="nm">大宅门 新篇</span><span class="tag t-c">年代</span></li>
+        </ul>
+      </div>
+      <div class="sc-body">
+        <ul>
+          <li><span class="tm">20:00</span><span class="nm">暗潮汹涌（美剧）第 8 集</span><span class="tag t-a">犯罪</span></li>
+          <li><span class="tm">21:00</span><span class="nm">实习医生 2026</span><span class="tag t-b">医疗</span></li>
+          <li><span class="tm">22:00</span><span class="nm">长安十二时辰 第二季</span><span class="tag t-c">古装</span></li>
+        </ul>
+      </div>
+      <div class="sc-body">
+        <ul>
+          <li><span class="tm">19:30</span><span class="nm">电竞之王</span><span class="tag t-a">青春</span></li>
+          <li><span class="tm">20:30</span><span class="nm">请回答 1999 大结局</span><span class="tag t-b">韩剧</span></li>
+          <li><span class="tm">21:30</span><span class="nm">恋爱合约</span><span class="tag t-c">爱情</span></li>
+        </ul>
+      </div>
+      <div class="sc-body">
+        <ul>
+          <li><span class="tm">18:00</span><span class="nm">奔跑吧 2026 第 5 期</span><span class="tag t-a">综艺</span></li>
+          <li><span class="tm">20:00</span><span class="nm">声生不息·家年华</span><span class="tag t-b">音乐</span></li>
+          <li><span class="tm">21:00</span><span class="nm">向往的生活·海岛季</span><span class="tag t-c">慢综</span></li>
+        </ul>
+      </div>
+      <div class="sc-body">
+        <ul>
+          <li><span class="tm">19:00</span><span class="nm">这！就是街舞 6 总决赛</span><span class="tag t-a">综艺</span></li>
+          <li><span class="tm">20:30</span><span class="nm">明日方舟·黎明 第 3 集</span><span class="tag t-b">奇幻</span></li>
+          <li><span class="tm">22:00</span><span class="nm">深夜食堂 特别篇</span><span class="tag t-c">治愈</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Anime -->
+<section id="anime">
+  <div class="container">
+    <div class="blk-head">
+      <h2>动漫番剧 <small>国漫 · 日漫 · 新番连载</small></h2>
+      <a href="#">新番时刻表 ›</a>
+    </div>
+    <div class="cards">
+      <div class="cd"><div class="cv"><div class="bg g5"></div><span class="ep">更新至 24 集</span><span class="star">9.3</span><span class="play"></span></div><div class="cx"><h4>斗破苍穹·年番</h4><p>国漫 / 玄幻热血</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g6"></div><span class="ep">更新至 12 集</span><span class="star">9.1</span><span class="play"></span></div><div class="cx"><h4>鬼灭之刃·锻刀村篇</h4><p>日漫 / 热血战斗</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g3"></div><span class="ep">更新至 30 集</span><span class="star">8.9</span><span class="play"></span></div><div class="cx"><h4>凡人修仙传</h4><p>国漫 / 仙侠修真</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g9"></div><span class="ep">更新至 18 集</span><span class="star">8.8</span><span class="play"></span></div><div class="cx"><h4>咒术回战·涉谷事变</h4><p>日漫 / 热血战斗</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g10"></div><span class="ep">更新至 10 集</span><span class="star">8.7</span><span class="play"></span></div><div class="cx"><h4>伍六七·暗影刺客</h4><p>国漫 / 搞笑热血</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g2"></div><span class="ep">更新至 22 集</span><span class="star">8.6</span><span class="play"></span></div><div class="cx"><h4>镖人</h4><p>国漫 / 武侠江湖</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g7"></div><span class="ep">更新至 14 集</span><span class="star">8.5</span><span class="play"></span></div><div class="cx"><h4>葬送的芙莉莲</h4><p>日漫 / 奇幻冒险</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g4"></div><span class="ep">更新至 8 集</span><span class="star">8.4</span><span class="play"></span></div><div class="cx"><h4>迷宫饭</h4><p>日漫 / 美食冒险</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g8"></div><span class="ep">更新至 6 集</span><span class="star">8.3</span><span class="play"></span></div><div class="cx"><h4>雾山五行·犀川幻紫</h4><p>国漫 / 国风武侠</p></div></div>
+      <div class="cd"><div class="cv"><div class="bg g1"></div><span class="ep">更新至 16 集</span><span class="star">8.2</span><span class="play"></span></div><div class="cx"><h4>怪兽 8 号</h4><p>日漫 / 热血机甲</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Variety -->
+<section id="variety">
+  <div class="container">
+    <div class="blk-head">
+      <h2>综艺娱乐 <small>真人秀 · 音乐 · 脱口秀</small></h2>
+      <a href="#">全部综艺 ›</a>
+    </div>
+    <div class="mini-list">
+      <div class="mi"><div class="ic g1"></div><div><h5>奔跑吧 2026 第 5 期：荒岛求生特别企划</h5><span>户外竞技 · 全 12 期</span></div></div>
+      <div class="mi"><div class="ic g2"></div><div><h5>声生不息·家年华 第五轮竞演</h5><span>音乐竞演 · 全 10 期</span></div></div>
+      <div class="mi"><div class="ic g3"></div><div><h5>向往的生活·海岛季 第 9 期</h5><span>慢综艺 · 全 14 期</span></div></div>
+      <div class="mi"><div class="ic g4"></div><div><h5>脱口秀大会 第七季 半决赛</h5><span>喜剧综艺 · 全 10 期</span></div></div>
+      <div class="mi"><div class="ic g5"></div><div><h5>这！就是街舞 6 总决赛之夜</h5><span>舞蹈竞技 · 全 10 期</span></div></div>
+      <div class="mi"><div class="ic g6"></div><div><h5>明星大侦探·重启 第 6 案</h5><span>推理真人秀 · 全 12 期</span></div></div>
+      <div class="mi"><div class="ic g7"></div><div><h5>极限挑战·荒野篇 第 4 期</h5><span>真人秀 · 全 8 期</span></div></div>
+      <div class="mi"><div class="ic g8"></div><div><h5>妻子的浪漫旅行 2026</h5><span>夫妻真人秀 · 全 10 期</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Topics -->
+<section id="topic">
+  <div class="container">
+    <div class="blk-head"><h2>精选专题 <small>编辑精选 · 告别片荒</small></h2><a href="#">更多专题 ›</a></div>
+    <div class="topics">
+      <div class="tp t1"><h4>🚀 2026 必看科幻片单</h4><p>从硬科幻大片到烧脑神作，一次看个够</p><span class="go">12 部精选 →</span></div>
+      <div class="tp t2"><h4>😂 周末解压喜剧合集</h4><p>笑到停不下来的高分喜剧推荐</p><span class="go">9 部精选 →</span></div>
+      <div class="tp t3"><h4>🔍 烧脑悬疑追剧指南</h4><p>层层反转，挑战你的推理极限</p><span class="go">15 部精选 →</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- News -->
+<section id="info">
+  <div class="container">
+    <div class="blk-head"><h2>影视资讯 <small>行业动态 · 影片解读 · 更新速报</small></h2><a href="#">更多资讯 ›</a></div>
+    <div class="mini-list">
+      <div class="mi"><div class="ic g1"></div><div><h5>《流浪地球 3》票房突破 40 亿，导演透露将开启新三部曲</h5><span>2026-10-02 · 行业动态</span></div></div>
+      <div class="mi"><div class="ic g5"></div><div><h5>79电影网独家解读：《暗潮汹涌》第八集的 5 个隐藏细节</h5><span>2026-10-01 · 深度解读</span></div></div>
+      <div class="mi"><div class="ic g3"></div><div><h5>十月新番速报：10 月新番定档一览，斗破苍穹年番同步更新</h5><span>2026-09-30 · 更新速报</span></div></div>
+      <div class="mi"><div class="ic g7"></div><div><h5>从《雾山五行》到《镖人》：国漫水墨风如何走向世界舞台</h5><span>2026-09-28 · 行业观察</span></div></div>
+      <div class="mi"><div class="ic g2"></div><div><h5>韩剧为何频频出爆款？79电影网盘点 2026 高分韩剧 TOP 10</h5><span>2026-09-26 · 盘点推荐</span></div></div>
+      <div class="mi"><div class="ic g10"></div><div><h5>周末片单｜一个人也要好好看电影的 8 部治愈佳作</h5><span>2026-09-25 · 观影指南</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="blk-head"><h2>关于本站 <small>了解 79电影网</small></h2></div>
+    <div class="about">
+      <div class="about-grid">
+        <div>
+          <h2>79电影网 · <em>专注影视资源整理</em>，做你的专属观影指南</h2>
+          <p><b style="color:var(--blue2)">79电影网</b> 是一个面向影视爱好者的资源聚合与推荐平台，网站网址为 <b style="color:var(--yellow)">https://79dianyingwang-zh.github.io</b>。每日精选全网高分电影、热播剧集、口碑综艺与经典动漫，帮你告别片荒。</p>
+          <p>本站资源分类清晰、标签齐全，支持按类型、地区、年份快速筛选。无论是院线大片、经典老片，还是追最新番剧，79电影网都能为你精准匹配。</p>
+          <div class="kpis">
+            <div class="kpi"><b>15,200+</b><span>影视资源</span></div>
+            <div class="kpi"><b>108,000+</b><span>日均访问</span></div>
+            <div class="kpi"><b>4K/1080P</b><span>高清画质</span></div>
+            <div class="kpi"><b>每日更新</b><span>17:30 准时</span></div>
+          </div>
+        </div>
+        <div class="info-card">
+          <h4>📌 网站访问信息</h4>
+          <dl>
+            <dt>网站名称</dt><dd>79电影网</dd>
+            <dt>网站网址</dt><dd>https://79dianyingwang-zh.github.io</dd>
+            <dt>主要栏目</dt><dd>电影 / 电视剧 / 动漫 / 综艺 / 专题 / 资讯 / 关于</dd>
+            <dt>更新频率</dt><dd>每日更新</dd>
+            <dt>服务宗旨</dt><dd>精选好片，告别片荒</dd>
+            <dt>适配终端</dt><dd>PC / 平板 / 手机全兼容</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="brand-s"><i>79</i><b>电影网</b></div>
+        <p>精选院线新片、热播剧集、口碑综艺与经典动漫，每日更新，一键追剧看片。</p>
+        <div class="siteurl">网站网址：<code>https://79dianyingwang-zh.github.io</code></div>
+      </div>
+      <div>
+        <h5>频道导航</h5>
+        <p><a href="#movie">电影频道</a><br><a href="#tv">热播电视剧</a><br><a href="#anime">动漫番剧</a><br><a href="#variety">综艺娱乐</a><br><a href="#topic">精选专题</a></p>
+      </div>
+      <div>
+        <h5>热门类型</h5>
+        <p><a href="#">动作冒险</a><br><a href="#">喜剧爱情</a><br><a href="#">悬疑惊悚</a><br><a href="#">科幻奇幻</a><br><a href="#">古装年代</a></p>
+      </div>
+      <div>
+        <h5>关于我们</h5>
+        <p><a href="#about">网站简介</a><br><a href="#">联系方式</a><br><a href="#">合作洽谈</a><br><a href="#">免责声明</a><br><a href="#">意见反馈</a></p>
+      </div>
+    </div>
+    <div class="copy">© 2026 79电影网 · 网站网址：https://79dianyingwang-zh.github.io · 专注影视资源推荐与观影指南<br>本站仅提供影视信息整理与推荐服务，相关版权归原作者及发行方所有。</div>
+  </div>
+</footer>
+
+<div class="float">
+  <button class="fb" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+</div>
+
+<script>
+function loc(h){var el=document.querySelector(h);if(el)window.scrollTo({top:el.offsetTop-70,behavior:'smooth'})}
+// chip tabs
+document.querySelectorAll('.chip').forEach(function(c){
+  c.addEventListener('click',function(){
+    var box=this.closest('.toolbar'), g=box.dataset.group;
+    box.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});
+    this.classList.add('on');
+    var sec=box.parentElement;
+    sec.querySelectorAll('.tab-p').forEach(function(p){p.hidden=true});
+    var t=document.getElementById(this.dataset.t);
+    t.hidden=false;
+  });
+});
+// schedule tabs
+document.querySelectorAll('.sc-head div').forEach(function(d,i){
+  d.addEventListener('click',function(){
+    var box=this.parentElement;
+    box.querySelectorAll('div').forEach(function(x){x.classList.remove('on')});
+    this.classList.add('on');
+    var sc=box.parentElement;
+    sc.querySelectorAll('.sc-body').forEach(function(b){b.classList.remove('on')});
+    sc.querySelectorAll('.sc-body')[i].classList.add('on');
+  });
+});
+// back to top
+window.addEventListener('scroll',function(){
+  document.getElementById('topBtn').classList.toggle('show',window.scrollY>400);
+});
+// nav active
+var links=document.querySelectorAll('.menu a');
+links.forEach(function(a){
+  a.addEventListener('click',function(){
+    links.forEach(function(x){x.classList.remove('cur')});
+    this.classList.add('cur');
+    document.getElementById('m').classList.remove('open');
+  });
+});
+</script>
+</body>
+</html>
